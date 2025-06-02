@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your email" id="email">
+    <input type="password" placeholder="Enter your password" id="passwd">
+    <button onclick="handleSubmit()">submit</button>
+    <script>
+
+    function handleSubmit(){
+        let a = document.getElementById('email').value
+        let b = document.getElementById('passwd').value
+        
+        if (a === '' || b ===''){
+            alert('Enter all the details')
+        }
+        else{
+            
+            localStorage.setItem('email',a)
+            localStorage.setItem('password',b)
+            window.location.href = "Login.html"
+        }
+
+    }   
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+*{
+    height: 300vh;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: aquamarine;
+    height: 20px;
+    position: fixed;
+    width: 100%;
+}
+ 
+.wrap1{
+    overflow: scroll;
+} 

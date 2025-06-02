@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="demo">HELLO WORLD</h1>
+    <h2>HELLO WORLD</h2>
+    <h3>HELLO WORLD</h3>
+    <h4>HELLO WORLD</h4>
+    <h5>HELLO WORLD</h5>
+
+    <label>HELLO WORLD</label>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora velit commodi, explicabo adipisci quo possimus quis optio porro incidunt, vel veritatis asperiores neque accusamus vero tenetur sunt distinctio quisquam dolore.</p>
+    <input type="text" id="demo1">
+    <input type="text" id="demo2">
+    <button onclick="add()">+</button>
+    <h2 id="result"></h2>
+
+    <input placeholder="Enter the email" id="input1"/>
+    <input placeholder="Enter the password" id="input2"/>
+    <button onclick="checkData()">submit</button>
+    
+    <script>
+        let a = 10;
+        let b = 20;
+
+       let c = a + b ;
+       let d = b - a;
+       let e = a * b;
+       let f = b / a;
+       let g = b % a;
+       
+      function add(){
+          let x = document.getElementById('demo1').value
+          let y = document.getElementById('demo2').value
+          let result = parseInt(x) + parseInt(y)
+
+          document.getElementById('result').textContent = result
+
+        } 
+
+        function checkData(){
+
+            let newname = document.getElementById('input1').value
+            let newpass = document.getElementById('input2').value
+
+            let oldpass = localStorage.getItem('password')
+            let oldname = localStorage.getItem('email')
+            
+            if (oldpass === newpass && oldname === newname){
+                alert('Login success')
+                window.location.href = 'Home.html'
+            }
+            else{
+                alert('Login falied')
+            }
+        }
+
+       
+    </script>
+</body>
+</html>
